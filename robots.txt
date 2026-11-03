@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ivanblazeski.github.io/alrightdone/sitemap.xml

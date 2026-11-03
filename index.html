@@ -8,28 +8,35 @@
 <meta property="og:title" content="Alright, Done: a friendly shopping list for iPhone">
 <meta property="og:description" content="Make a list for each store, tick things off, and get everything in one trip. Your lists stay on your iPhone.">
 <meta property="og:image" content="https://ivanblazeski.github.io/alrightdone/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#FFF7EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B1510" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap">
-<a class="brand" href="./"><img src="assets/favicon.png" alt="" width="40" height="40">Alright, Done</a>
+<a class="brand" href="./"><img src="assets/icon-96.png" alt="" width="40" height="40">Alright, Done</a>
 <nav class="site-nav" aria-label="Main"><a href="support/">Support</a><a href="privacy/">Privacy</a></nav>
 </div></header>
-<main class="wrap">
+<main class="wrap" id="main">
 <section class="hero">
 <div>
-<div class="say"><img src="assets/wiki.png" alt="Wiki, the app's little green mascot, waving" width="88" height="88"><span class="bubble">Hi, I’m Wiki!</span></div>
+<div class="say"><img src="assets/wiki-192.png" alt="Wiki, the app's little green mascot, waving" width="88" height="88"><span class="bubble">Hi, I’m Wiki!</span></div>
 <h1>Get everything in one trip.</h1>
 <p class="lead">Alright, Done is a friendly shopping list for iPhone. Make a list for each store, tick things off as you go, and finish with one tap.</p>
-<span class="status">Coming soon to the App Store</span>
+<div class="actions">
+<a class="button" href="#how">See how it works<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+<p class="status">Coming soon to the App Store</p>
+</div>
 </div>
 <div class="listcard" role="img" aria-label="Example list: Supermarket, with milk and bread ticked off, eggs and bananas still to buy, and an Alright, done! button">
 <div class="listcard-head"><span class="tile" aria-hidden="true">🛒</span><div><strong>Supermarket</strong><span>4 items</span></div></div>
 <ul class="items" aria-hidden="true">
-<li class="done"><span class="box">✓</span><span class="name">Milk</span><span class="amount">2 L</span></li>
-<li class="done"><span class="box">✓</span><span class="name">Bread</span><span class="amount">1 pc</span></li>
+<li class="done"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="name">Milk</span><span class="amount">2 L</span></li>
+<li class="done tick"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7"/></svg></span><span class="name">Bread</span><span class="amount">1 pc</span></li>
 <li><span class="box"></span><span class="name">Eggs</span><span class="amount">10 pcs</span></li>
 <li><span class="box"></span><span class="name">Bananas</span><span class="amount">1 kg</span></li>
 </ul>
@@ -37,17 +44,20 @@
 </div>
 </section>
 
-<section class="features" aria-label="What the app does">
-<div><h2>A list for every store</h2><p>Supermarket, bakery, pharmacy: each gets its own list, with quick suggestions that fit the store.</p></div>
-<div><h2>Tick it off, then “Alright, done!”</h2><p>Check items as they go in the basket. One tap when you’re finished, and the list is ready for next time.</p></div>
-<div><h2>A weekly goal you can keep</h2><p>Pick how often you shop and grow a streak. One free pause a month, because life happens.</p></div>
-<div><h2>Your usuals in one tap<span class="pro">PRO</span></h2><p>Star the things you buy every week and add them all to the right list at once.</p></div>
-<div><h2>See what you buy most</h2><p>History keeps every finished shop, with how much you bought this week. Monthly stats come with Pro.</p></div>
-<div><h2>In your language</h2><p>English, German, French, Spanish and Italian, with metric or US units.</p></div>
+<section class="features" aria-labelledby="features">
+<h2 class="sr-only" id="features">What the app does</h2>
+<ul>
+<li><h3>A list for every store</h3><p>Supermarket, bakery, pharmacy: each gets its own list, with quick suggestions that fit the store.</p></li>
+<li><h3>Tick it off, then “Alright, done!”</h3><p>Check items as they go in the basket. One tap when you’re finished, and the list is ready for next time.</p></li>
+<li><h3>A weekly goal you can keep</h3><p>Pick how often you shop and grow a streak. One free pause a month, because life happens.</p></li>
+<li><h3>Your usuals in one tap<span class="pro">PRO</span></h3><p>Star the things you buy every week and add them all to the right list at once.</p></li>
+<li><h3>See what you buy most</h3><p>History keeps every finished shop, with how much you bought this week. Monthly stats come with Pro.</p></li>
+<li><h3>In your language</h3><p>English, German, French, Spanish and Italian, with metric or US units.</p></li>
+</ul>
 </section>
 
-<section class="steps" aria-labelledby="how">
-<h2 id="how">How it works</h2>
+<section class="steps" id="how" aria-labelledby="how-title">
+<h2 id="how-title">How it works</h2>
 <ol>
 <li><span class="n" aria-hidden="true">1</span><div><h3>Make a list</h3><p>One for each store, with suggestions that fit it. Add your own in a few taps.</p></div></li>
 <li><span class="n" aria-hidden="true">2</span><div><h3>Tick things off</h3><p>Tap each item as it goes in the basket. You’ll see at a glance what’s still missing.</p></div></li>
@@ -56,20 +66,20 @@
 </section>
 
 <section class="hello" aria-labelledby="hello">
-<div class="portrait"><img class="photo" src="assets/ivan.jpg" alt="Ivan Blazheski, smiling" width="176" height="176"><img class="wiki" src="assets/wiki.png" alt="" width="72" height="72"></div>
+<div class="portrait"><img class="photo" src="assets/ivan.jpg" alt="Ivan Blazheski, smiling" width="176" height="176" loading="lazy" decoding="async"><img class="wiki" src="assets/wiki-192.png" alt="" width="72" height="72" loading="lazy" decoding="async"></div>
 <div class="text">
-<h2 id="hello">Hi, I’m Ivan! 👋</h2>
+<h2 id="hello">Hi, I’m Ivan! <span aria-hidden="true">👋</span></h2>
 <p>I built Alright, Done because I wanted a simple way to never forget anything when I go shopping, and to challenge myself to become a better designer and developer along the way.</p>
 <p>I wanted a shopping list that feels genuinely enjoyable to use. Something as simple as tapping an item to mark it as bought should feel effortless and satisfying.</p>
 <p>That’s why I spent so much time on the little details, from the clean, intuitive design to the small interactions that make everyday shopping a little easier and more fun.</p>
 <p>I hope you feel that care when you use Alright, Done, and that it makes your shopping trips easier, just like it has for me.</p>
-<p>Made with 💚 by Ivan.</p>
+<p>Made with <span class="emoji">💚</span> by Ivan.</p>
 <div class="signature"><strong>Ivan Blazheski</strong><span>Indie developer and creator of Alright, Done</span></div>
 </div>
 </section>
 
 <section class="promise">
-<img src="assets/wiki.png" alt="" width="96" height="96">
+<img src="assets/wiki-192.png" alt="" width="96" height="96" loading="lazy" decoding="async">
 <div><h2>Your lists stay on your iPhone.</h2><p>No account, no ads, no tracking. <a href="privacy/">Read the privacy policy</a></p></div>
 </section>
 </main>

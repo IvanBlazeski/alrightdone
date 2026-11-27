@@ -58,13 +58,14 @@ img{max-width:100%;height:auto}
 .brand{display:inline-flex;align-items:center;gap:.65rem;min-height:2.75rem;color:var(--ink);text-decoration:none;font-weight:900;font-size:1.25rem;letter-spacing:-.01em}
 .brand img{width:2.5rem;height:2.5rem;border-radius:.7rem;box-shadow:0 2px 0 var(--border)}
 .site-nav,.site-footer nav{display:flex;gap:.25rem;margin-right:-.75rem}
-.site-nav a,.site-footer nav a{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .75rem;border-radius:.8rem;text-decoration:none;font-weight:800;color:var(--ink2);transition:color .15s ease,background-color .15s ease}
+.site-nav a,.site-footer nav a{display:inline-flex;white-space:nowrap;align-items:center;min-height:2.75rem;padding:0 .75rem;border-radius:.8rem;text-decoration:none;font-weight:800;color:var(--ink2);transition:color .15s ease,background-color .15s ease}
 .site-nav a[aria-current=page],.site-footer nav a[aria-current=page]{color:var(--ink)}
 .site-nav a[aria-current=page]{background:var(--surface2)}
 @media (hover:hover) and (pointer:fine){
   .site-nav a:hover,.site-footer nav a:hover{color:var(--ink);background:var(--surface2)}
 }
 .site-footer{margin-top:var(--section);padding:1.5rem 0 2.5rem;border-top:2px solid var(--border);color:var(--ink2);font-size:var(--t-small)}
+.site-footer nav{flex-wrap:wrap}
 .site-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:.5rem 1rem;flex-wrap:wrap}
 
 /* buttons: tangerine with a lip, lime is kept for "done" */
@@ -89,6 +90,13 @@ img{max-width:100%;height:auto}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
 .beta-note{margin:.9rem 0 0;color:var(--ink2);font-size:var(--t-small)}
 .status{display:inline-flex;align-items:center;gap:.6rem;margin:1.5rem 0 0;color:var(--ink2);font-weight:800;font-size:var(--t-small)}
+/* Apple badge: official artwork, unmodified. 52px tall (Apple min 40px); clear space >= 1/4 height (13px) comes from the 1rem .actions gap and surrounding margins. */
+.store-badge{display:inline-flex;border-radius:.8rem;transition:transform .15s ease}
+.store-badge picture,.store-badge img{display:block;width:auto;height:52px}
+@media (hover:hover) and (pointer:fine){ .store-badge:hover{transform:translateY(-1px)} }
+.beta-link{margin:.5rem 0 0;color:var(--ink2);font-size:var(--t-small)}
+.beta-link a{color:inherit;font-weight:800}
+.beta-link a:hover{color:var(--ink)}
 .status::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px var(--tint);flex:none}
 
 /* the list card: the one memorable thing */
